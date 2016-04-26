@@ -596,6 +596,7 @@ var PropertyFactory = (function(){
                     mat.translate(-this.a.v[0],-this.a.v[1],this.a.v[2]);
                 }
                 if(this.s){
+                    console.log(this.s);
                     mat.scale(this.s.v[0],this.s.v[1],this.s.v[2]);
                 }
                 if(this.r){
@@ -618,6 +619,7 @@ var PropertyFactory = (function(){
                     mat.translate(-this.a.pv[0],-this.a.pv[1],this.a.pv[2]);
                 }
                 if(this.s){
+                    console.log(this.s);
                     mat.scale(this.s.pv[0],this.s.pv[1],this.s.pv[2]);
                 }
                 if(this.r){
@@ -656,7 +658,8 @@ var PropertyFactory = (function(){
                     this.v.translate(-this.a.v[0],-this.a.v[1],this.a.v[2]);
                 }
                 if(this.s){
-                    this.v.scale(this.s.v[0],this.s.v[1],this.s.v[2]);
+                    /*=================THIS IS WHERE THE SCALE HAPPENS====================*/
+                    this.v.scale(this.s.v[0] * this.elem.scaleFactor, this.s.v[1] * this.elem.scaleFactor ,this.s.v[2]*this.elem.scaleFactor);
                 }
                 if(this.sk){
                     this.v.skewFromAxis(-this.sk.v,this.sa.v);

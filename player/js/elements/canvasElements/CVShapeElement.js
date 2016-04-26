@@ -4,6 +4,8 @@ function CVShapeElement(data, comp,globalData){
     this.viewData = [];
     this.shapesData = data.shapes;
     this.firstFrame = true;
+    /*SAM CODE*/
+    this.scaleFactor = 1.0;
     this.parent.constructor.call(this,data, comp,globalData);
 }
 createElement(CVBaseElement, CVShapeElement);

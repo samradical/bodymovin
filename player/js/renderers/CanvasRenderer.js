@@ -25,6 +25,7 @@ function CanvasRenderer(animationItem, config){
         this.contextData.saved[i] = new Array(16);
     }
     this.elements = [];
+    this.elementsDict = {};
     this.transformMat = new Matrix();
 }
 
@@ -63,6 +64,8 @@ CanvasRenderer.prototype.buildItems = function(layers,elements, comp){
             this.buildItems(layers[i].layers,elems,elements[i]);
             elements[elements.length - 1].setElements(elems);
         }
+        /*SAM CODE*/
+        this.elementsDict[layers[i].nm] = elements[elements.length - 1]
     }
 };
 

@@ -520,6 +520,10 @@ AnimationItem.prototype.getAssets = function () {
     return this.assets;
 };
 
+AnimationItem.prototype.getAnimationLayers = function () {
+    return this.renderer.elementsDict;
+};
+
 AnimationItem.prototype.trigger = function(name){
     if(this._cbs[name]){
         switch(name){
